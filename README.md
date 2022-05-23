@@ -12,19 +12,24 @@ The purpose of this project was to use Neural Networks to create a binary classi
          - The features are: 'APPLICATION_TYPE', 'AFFILIATION', 'CLASSIFICATION', 'USE_CASE', 'ORGANIZATION', and
  'INCOME_AMT'.
     - What variable(s) are neither targets nor features, and should be removed from the input data?
-        - 'EIN', 'NAME', and 'SPECIAL_CONSIDERATIONS'
+        - 'EIN' and 'NAME'
 
     Compiling, Training, and Evaluating the Model:
     - How many neurons, layers, and activation functions did you select for your neural network model, and why?
-        - We used a total of 16 neurons, 2 layers, and 2 activation functions. We chose 8 neurons because best practice says to use 2-3 times the number of inputs for your neuron count. We chose 2 hidden layers because we testing including a third and it produced no added value. We chose 2 activation features (relu and sigmoid) both because they are the most common and because other combinations returned similar or worse results. 
+        - We initially used a total of 16 neurons, 2 layers, and 2 activation functions.
+        - For the optimization attempt, we removed an additional unnecesarry column ('SPECIAL_CONSIDERATIONS'), increased the number of neurons in the two original layers to 50 and 10, and added a third hidden layer with 5 neurons. We also tried out a tanh activation feature to see if it helped our results. 
+        
 
     - Were you able to achieve the target model performance?
-        - No, our best performance when "optimizing" only achieved 65% accuracy
+        - No, our best performance when "optimizing" only achieved ?% accuracy
 
     - What steps did you take to try and increase model performance?
         - We adjusted the number of neurons both up and down, added a 3rd hidden layer, and tried various combinations of activation functions.
 
 
-# Summary
+# Summary 
 
-Overall, the neural network model results were disappointing. The inital model only reached 63% accuracy and the "optmized" model barely nudged upward to 65%. It is possible that the model is overfitted. Perhaps using fewer epochs could improve training. 
+
+Overall, the neural network model results were disappointing. The inital model only reached 72.8% accuracy with 55% loss and the "optmized" model barely nudged upward to 74% with 53% loss. It is possible that the model is overfitted. Perhaps using fewer epochs could improve training. 
+
+A Random Forest model might be a better fit for this situation because it deals with categorical variables better.
