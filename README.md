@@ -21,7 +21,7 @@ The purpose of this project was to use Neural Networks to create a binary classi
         
 
     - Were you able to achieve the target model performance?
-        - No, our best performance when "optimizing" only achieved ?% accuracy
+        - No, our best performance when "optimizing" only achieved 74% accuracy
 
     - What steps did you take to try and increase model performance?
         - We adjusted the number of neurons both up and down, added a 3rd hidden layer, and tried various combinations of activation functions.
